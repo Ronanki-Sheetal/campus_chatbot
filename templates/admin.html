@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Saved chat logs</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+<body class="admin-page"><main class="admin-wrap"><a href="/">← Back to chat</a><h1>Recent chat logs</h1><p class="muted">Up to 200 most recent saved exchanges.</p>
+{% if messages %}<div class="log-list">{% for item in messages %}<article class="log-card"><small>{{ item.created_at }} · Session {{ item.session_id }}</small><p><b>User:</b> {{ item.user_message }}</p><p><b>Assistant:</b> {{ item.bot_response }}</p></article>{% endfor %}</div>{% else %}<p>No saved messages yet. Start a conversation first.</p>{% endif %}</main></body></html>

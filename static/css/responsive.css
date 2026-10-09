@@ -1,0 +1,51 @@
+@media (min-width: 701px) and (max-height: 640px) {
+  .app-shell {
+    height: calc(100dvh - 32px);
+    min-height: 0;
+    margin: 16px auto;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .chat-panel {
+    min-height: 0;
+  }
+
+  .messages {
+    min-height: 0;
+  }
+
+  .sidebar {
+    padding: 14px 18px;
+  }
+
+  .sidebar h1 {
+    margin-top: 10px;
+  }
+
+  .online {
+    margin-top: 12px;
+  }
+
+  .new-chat {
+    margin-top: 12px;
+  }
+
+  .sidebar-note,
+  .admin-link {
+    display: none;
+  }
+
+  .chat-header {
+    flex-shrink: 0;
+    height: 64px;
+  }
+
+  .composer {
+    flex-shrink: 0;
+  }
+
+  .disclaimer {
+    flex-shrink: 0;
+    margin: 3px 8% 0;
+  }
+}

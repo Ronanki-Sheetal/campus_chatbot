@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aspire Bot | General Knowledge Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-mark">A</div><h1>Aspire Bot</h1>
+      <p class="muted">General Knowledge Chatbot</p>
+      <div class="online"><span></span> Assistant online</div>
+      <button id="new-chat" class="new-chat">＋ New conversation</button>
+      <p class="sidebar-note">Ask questions about science, geography, history, and sports.</p>
+      <a class="admin-link" href="/admin">View saved chat logs →</a>
+    </aside>
+    <section class="chat-panel">
+      <header class="chat-header"><div><strong>Aspire Bot</strong><small>Quick answers to general-knowledge questions</small></div><span class="session-label">Your private session</span></header>
+      <div id="messages" class="messages" aria-live="polite"><div class="empty-state"><div class="sparkle">✦</div><h2>Ready for a GK question?</h2><p>Try “What is the capital of France?”</p></div></div>
+      <div id="typing" class="typing hidden"><span></span><span></span><span></span> Assistant is typing</div>
+      <form id="chat-form" class="composer"><label class="sr-only" for="message-input">Your message</label><input id="message-input" autocomplete="off" placeholder="Ask a general-knowledge question…"><button aria-label="Send message" type="submit">➤</button></form>
+      <p class="disclaimer">Answers come from a small built-in set of facts; ask another way if a question isn’t recognized.</p>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
